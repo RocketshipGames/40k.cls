@@ -52,7 +52,7 @@ of cards or a graphics-heavy page.
 
 For a variety of reasons, mostly related to getting shit done, the
 class doesn't utilize the standard LaTeX structure commands.  It
-instead provides the following:
+instead provides the following.
 
     \pagetitle{foo}
 
