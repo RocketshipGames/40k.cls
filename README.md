@@ -2,8 +2,12 @@
 
 <a href="http://rocketshipgames.com"><img src="docs/rocketshipgames-logo.png" title="Rocketship Games" alt="Rocketship Games Logo" width="120" align="right"></a>
 
-This repository provides a LaTeX file and a few associated graphics
-for tournament packets, mission writeups, and fan supplements.
+This repository provides a [LaTeX](http://www.latex-project.org/)
+class file and a few associated graphics to help typeset nice looking
+tournament packets, mission writeups, and fan supplements for [Games
+Workshop's](http://www.games-workshop.com/) *[Warhammer
+40,000](http://boardgamegeek.com/boardgamefamily/4341/warhammer-40000-wargames)*
+miniatures game.
 
 If you make use of this I'd absolutely love to hear about it!
 
@@ -34,7 +38,8 @@ Pictures from those examples:
 
 The class currently provides a fairly small set of functionality.
 
-In general it should do smart things about spacing.
+In general it should do smart things about spacing.  Comments and
+suggestions are welcome.
 
 ### Document
 
