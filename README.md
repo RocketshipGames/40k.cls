@@ -1,5 +1,6 @@
-<a href="http://rocketshipgames.com"><img src="docs/rocketshipgames-logo.png" title="Rocketship Games" alt="Rocketship Games Logo" align="right"></a>
 # 40k.cls
+
+<a href="http://rocketshipgames.com"><img src="docs/rocketshipgames-logo.png" title="Rocketship Games" alt="Rocketship Games Logo" width="95" align="right"></a>
 
 This repository provides a LaTeX file and a few associated graphics
 for tournament packets, mission writeups, and fan supplements.
