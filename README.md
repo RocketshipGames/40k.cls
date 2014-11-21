@@ -10,6 +10,7 @@ Workshop's](http://www.games-workshop.com/) *[Warhammer
 miniatures game.
 
 If you make use of this I'd absolutely love to hear about it!
+Comments and suggestions are also very welcome.
 
 Contact: [Joe Kopena](mailto:tjkopena@gmail.com),
 [rocketshipgames.com/blogs/tjkopena/](http://rocketshipgames.com/blogs/tjkopena/)
@@ -38,8 +39,7 @@ Pictures from those examples:
 
 The class currently provides a fairly small set of functionality.
 
-In general it should do smart things about spacing.  Comments and
-suggestions are welcome.
+In general it should do smart things about spacing.
 
 ### Document
 
