@@ -79,6 +79,15 @@ Typeset the given title as a bold font inline paragraph start.  This
 is intended mostly for particular rules, e.g., "Army of One" or
 "Secondary Objective."
 
+### Layout
+
+    \begin{columns}
+    \end{columns}
+
+Begin a two-column format.  This relies on the multicol package and is
+basically just using its multicols command, but squelches indents at
+the start of the environment.
+
 ### Decorations
 
     \begin{story}{height}{foo}

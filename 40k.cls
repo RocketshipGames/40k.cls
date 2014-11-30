@@ -221,10 +221,10 @@
 
 \newenvironment{columns}
 {\begin{multicols}{2}
-%\ignorespaces\noindent
+\@afterindentfalse\@afterheading
 }
 {\end{multicols}
-%\ignorespacesafterend
+\ignorespacesafterend
 }
 
 %%----------------------------------------------------------------------
