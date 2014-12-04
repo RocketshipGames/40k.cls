@@ -19,6 +19,9 @@
 %%-- Core Packages
 
 \LoadClass[12pt]{article}
+
+\pdfminorversion=4
+
 \RequirePackage{calc}
 
 
