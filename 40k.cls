@@ -23,6 +23,7 @@
 \pdfminorversion=4
 
 \RequirePackage{calc}
+\RequirePackage{suffix}
 
 
 \newcommand{\setbackground}{\AddToShipoutPicture{\BackgroundPic{background-skull.pdf}}}
@@ -151,9 +152,8 @@
 \@afterindentfalse\@afterheading
 }
 
-\newcommand{\missiontitle}[1]
-{\clearpage
-\noindent%
+\newcommand{\missiontitledraw}[1]
+{\noindent%
 \centerline{\scalebox{1.5}{\Large\bf\sc\fontfamily{ptm}\selectfont #1}}
 \vspace*{-1pt}
 \hrule
@@ -163,13 +163,15 @@
 \@afterindentfalse\@afterheading
 }
 
+\newcommand\missiontitle[1]{\clearpage\missiontitledraw{#1}}
+\WithSuffix\newcommand\missiontitle*[1]{\missiontitledraw{#1}}
+
 \newcommand{\missionheading}[1]
 {\bigskip\noindent{\Large\bf\sc\fontfamily{ptm}\selectfont #1}%
 \@afterindentfalse\@afterheading\par}
 
 \newcommand{\missionsubheading}[1]
 {\bigskip\noindent{\bf #1}~~\gobblepars}
-
 
 %%----------------------------------------------------------------------
 %%----------------------------------------------------------------------
@@ -218,6 +220,18 @@
 \smallskip
 }
 
+
+\newenvironment{examples}[1]
+{\noindent%
+\divider
+\vspace*{9pt}
+\centerline{\scalebox{1.25}{\Large\bf\sc\fontfamily{ptm}\selectfont #1}}
+\@afterindentfalse\@afterheading
+}
+{
+\divider
+}
+
 %%----------------------------------------------------------------------
 %%----------------------------------------------------------------------
 %%-- Formatting
@@ -230,11 +244,18 @@
 \ignorespacesafterend
 }
 
+\newcommand{\divider}{%
+\hrule
+\vspace*{3pt}
+\hrule
+}
+
 %%----------------------------------------------------------------------
 %%----------------------------------------------------------------------
 %%-- Background picture
 
 \RequirePackage{eso-pic}
+
 \newcommand\BackgroundPic[1]{%
 \put(72,-36){%
 \parbox[b][\paperheight]{\paperwidth}{%
@@ -246,5 +267,15 @@ keepaspectratio]{#1}%
 }}}
 
 \setbackground
+
+\newcommand{\squelchbackground}{%
+%\let\saveshipout\ESO@HookIBG
+\ClearShipoutPicture
+}
+
+\newcommand{\restorebackground}{%
+%\AddToShipoutPicture{\saveshipout}
+\setbackground
+}
 
 \endinput
