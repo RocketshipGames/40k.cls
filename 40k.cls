@@ -92,6 +92,7 @@
 
 \RequirePackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{F}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 
 \pagestyle{empty}%
@@ -249,6 +250,12 @@
 \vspace*{3pt}
 \hrule
 }
+
+%%----------------------------------------------------------------------
+%%----------------------------------------------------------------------
+%%-- Bits and Bobs
+
+\newcommand{\checkbox}{\raisebox{-1pt}{\fbox{\hbox to 1em{\vbox to 1em{}}}}}
 
 %%----------------------------------------------------------------------
 %%----------------------------------------------------------------------
