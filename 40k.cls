@@ -52,6 +52,7 @@
 \setlength{\topmargin}{0in}
 \setlength{\headheight}{0pt}
 \setlength{\headsep}{0pt}
+\setlength{\footskip}{18pt}
 \setlength{\textheight}{\paperheight-1in}
 
 
@@ -76,6 +77,7 @@
 \RequirePackage{multirow}
 \RequirePackage{amsmath}
 \RequirePackage{tabularx}
+\RequirePackage{colortbl}
 
 \RequirePackage{graphicx}
 
@@ -90,10 +92,16 @@
 
 \RequirePackage{stfloats}
 
+\RequirePackage{pdflscape}
+\RequirePackage{enumitem}
+
 \RequirePackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{F}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{E}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{O}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \pagestyle{empty}%
 
@@ -183,7 +191,9 @@
 \def\savelastnode{\pgfextra\edef\tmpA{\tikzlastnode}\endpgfextra}
 \def\restorelastnode{\pgfextra\edef\tikzlastnode{\tmpA}\endpgfextra}
 % Define box and box title style
-\tikzstyle{borderbox} = [draw=black, fill=ltgray!20, very thick,
+\tikzstyle{borderbox} = [draw=black, very thick, fill=ltgray!20,
+    rectangle, inner sep=15pt, inner ysep=12pt]
+\tikzstyle{plainbox} = [draw=black, very thick, fill=white,
     rectangle, inner sep=15pt, inner ysep=12pt]
 % rounded corners, 
 \tikzstyle{fancytitle} =[fill=black, text=white]
@@ -198,9 +208,16 @@
 \newcommand{\rescheck}{$\Box$}
 
 \newenvironment{story}[2]{
+\begin{realstory}{#1}{#2}{borderbox}
+}
+{
+\end{realstory}
+}
+
+\newenvironment{realstory}[3]{
 \noindent\hfil%
 \begin{tikzpicture}%
-\node [borderbox,club suit,title=#2] (box)\bgroup%
+\node [#3,club suit,title=#2] (box)\bgroup%
 \vbox to #1 \bgroup\hbox to 0.8\linewidth \bgroup%
 \begin{minipage}{0.8\linewidth}\it\fontfamily{ptm}\selectfont%
 \noindent\ignorespaces%

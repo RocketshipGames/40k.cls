@@ -1,0 +1,340 @@
+%%----------------------------------------------------------------------
+%% Decorations
+%%----------------------------------------------------------------------
+
+\newcommand{\teaser}[1]{\bigskip\centerline{\emph{#1}}\bigskip}
+\newlength{\headingspacing}
+\setlength{\headingspacing}{-0.5em}
+
+%%----------------------------------------------------------------------
+%% Deployment Zones
+%%----------------------------------------------------------------------
+
+\newenvironment{tablesetup}
+{\missionheading{Table Setup}}
+{}
+
+\newcommand{\fourbysix}{%
+\renewcommand{\dawnofwar}%
+{Deployment zones are \textbf{Dawn of War}, as on pg.~131 of the
+\emph{Warhammer 40,000} rulebook (12'' long edges).}
+
+\renewcommand{\hammerandanvil}%
+{Deployment zones are \textbf{Hammer and Anvil}, as on
+  page~131 of the main rulebook (24'' short edges).}
+
+\renewcommand{\vanguardstrike}%
+{Deployment zones are \textbf{Vanguard Strike}, as on page~131 of the
+  main \emph{Warhammer 40,000} rulebook.  Vanguard Strike may be
+  approximated by deploying within a 33.5'' x 50'' table corner
+  triangle.  The player choosing zones may pick any of the four
+  corners; their opponent takes the diagonally opposite corner.}
+}
+
+\newcommand{\dawnofwar}%
+{Deployment zones are \textbf{Dawn of War}: Up to 12'' from long
+edges on a 4' x 6' table, any table edge on 4' x 4'.}
+
+\newcommand{\hammerandanvil}%
+{Deployment zones are \textbf{Hammer and Anvil}: On a 4' x 4' table
+  this is the same as Dawn of War, up to 12'' from any table edge.  On
+  a 4' x 6' table the deployment zones are up to 2' from the short
+  table edges.}
+
+\newcommand{\vanguardstrike}%
+{Deployment zones are \textbf{Vanguard Strike}, as defined on page~131
+  of the main \emph{Warhammer 40,000} rulebook.  Vanguard Strike may
+  be approximated by deploying within a 33.5'' x 50'' table corner
+  triangle on a 4' x 6' table, or a 33.5'' x 33.5'' table corner
+  triangle on a 4' x 4' board.  The player that wins the zone roll off
+  may pick any of the four corners, and the other player takes the
+  diagonally opposite corner.}
+
+\newcommand{\quartered}%
+{Deployment zones are the rectangles in each table corner~12'' in from
+  the long edge and~24'' in from the short edges.  The player that
+  wins the zone roll off picks either pair of \emph{diagonally
+    opposite} corners as their deployment zone and a long table edge
+  as their player edge.  The other player takes the other pair of
+  diagonally opposite corners and opposite long edge.}
+
+%%----------------------------------------------------------------------
+%% Mission Rules
+%%----------------------------------------------------------------------
+
+\newenvironment{missionrules}
+{
+\missionheading{Mission Specific Rules}
+\vspace{\headingspacing}
+
+%The following mission specific rules apply, in addition to those
+%applied to all missions in this packet.
+}
+{
+}
+
+\newcommand{\nightfighting}%
+{\missionsubheading{Night Fighting.}  If either player opts for Night
+  Fighting before any deployment begins, on a single D6 of 4+ all
+  units have Stealth throughout Turn 1.}
+
+\newcommand{\nightfalls}%
+{\missionsubheading{Night Falls.}  Night Fighting does not apply in
+  this mission.  Instead, if either player opts for Night Falls before
+  any deployment begins, on a single~D6 of~4+ all units except
+  superheavy vehicles and gargantuan creatures have Stealth throughout
+  Turns~5,~6, and~7.}
+
+
+%%----------------------------------------------------------------------
+%% Scoring
+%%----------------------------------------------------------------------
+
+\newenvironment{scoring}{
+\missionheading{Scoring}
+\vspace{\headingspacing}
+
+% This mission is scored by objectives achieved, as follows.
+}
+{
+\missionsubheading{Tertiary Objectives.}  As given in the common
+tertiary objectives list of this packet.
+}
+
+\newenvironment{primaries}
+{
+\missionsubheading{Primary Objectives}
+}
+{}
+
+
+\newenvironment{secondaries}
+{
+\missionsubheading{Secondary Objectives.}
+
+Both players simultaneously choose and then reveal a single secondary
+objective for themselves from the list below.  Any necessary
+selections are chosen and then revealed with the objective unless
+noted otherwise.  \underline{No more than~6 victory points may be
+earned via any secondary.}
+
+\begin{itemize}
+}
+{
+\end{itemize}
+}
+
+%%----------------------------------------------------------------------
+%% Secondaries
+%%----------------------------------------------------------------------
+
+\newcommand{\securepositions}%
+{\item \textit{Secure Positions.}  For each table quadrant, secretly
+  select a terrain piece at least~50\% inside it, recording your
+  selections unambiguously.  Reveal these at game end and score~2
+  victory points for each that you control, treating them as objective
+  markers.  Note that this means a single unit cannot claim both a
+  primary objective marker and a terrain piece, nor multiple pieces
+  simultaneously.}
+
+\newcommand{\breachpoints}%
+{\item \textit{Breach Points.}  Choose two terrain pieces at least
+  partially in the opposing deployment zone.  Do not declare these
+  now, but do secretly record your selection unambiguously!  Reveal
+  these at game end and score~3 victory points for each piece that you
+  control, treating them as objective markers.  Note that this means a
+  single unit cannot claim both a primary objective marker and a
+  terrain piece simultaneously.}
+
+\newcommand{\seizeground}%
+{\item \textit{Seize Ground.}  Choose two terrain pieces not in your
+  deployment zone.  Do not declare these now, but do secretly record
+  your selection unambiguously!  Reveal these at game end and score~3
+  victory points for each piece that you control, treating them as
+  objective markers.  Note that this means a single unit cannot claim
+  both a primary objective marker and a terrain piece simultaneously.}
+
+\newcommand{\reconnaissance}%
+{\item \textit{Reconnaissance.}  At game end, score~2 victory points
+  for each friendly scoring unit with the Scout or Infiltrate USR
+  completely within 12'' of your opponent's table edge.}
+
+\newcommand{\seekanddestroy}%
+{\item \textit{Seek and Destroy.}  Choose and declare a Battlefield
+  Role other than Troop.  Score~2 victory points for each enemy unit
+  of this role completely destroyed or falling back at the end of the
+  game.}
+
+\newcommand{\meatgrinder}%
+{\item \textit{Meat Grinder.}  Score~1 victory point for each opposing
+  Troop unit completely destroyed or falling back at the end of the
+  game.}
+
+\newcommand{\hullbreaker}%
+{\item \textit{Hull Breaker.}  Score~1 victory point for each opposing
+  vehicle completely destroyed, including superheavy vehicles, and for
+  each monstrous or gargantuan creature removed as a casualty.}
+
+\newcommand{\witchhunter}%
+{\item \textit{Witch Hunter.}  Score~2 victory points for each
+  opposing psyker removed as a casualty.  Units with Brotherhood of
+  Psykers/Sorcerers must be removed in their entirety to count toward
+  this objective.}
+
+\newcommand{\civilians}%
+{\item \textit{Civilians}.  Add~6 civilian models to your army, each
+  its own unit, considered Battle Brothers to all of your models and
+  enemies to your opponents', with the following stat line:
+
+  \smallskip
+  \centerline{\textbf{Civilian} \hspace{0.5em} WS1 BS0 S2 T2 W1 I1 A0
+    LD3 Sv- \hspace{0.5em} Infantry (Independent Character)}
+
+  Civilians must be deployed when this is objective is revealed (roll
+  off and alternate one by one if both players choose this objective),
+  at least 18'' from your player table edge and not within~12'' of any
+  other civilian.  They may only move or run when joined with a unit,
+  and a unit with attached civilians may not charge.  Focused solely
+  on staying alive rather than fighting, civilians receive a~+1 to any
+  cover save they take; this does not confer to other models in any
+  unit they join.  At game end you score~2 victory points for every
+  civilian in your army not removed as a casualty.  Civilians are
+  non-scoring units and are not included in any other scoring
+  calculations.}
+
+\newcommand{\assassination}%
+{\item \textit{Assassination.}  Score~1 victory point for each
+  opposing character model removed as a casualty or falling back at
+  the end of the game.  Note that this is not limited to just
+  independent characters.}
+
+\newcommand{\interrogation}%
+{\item \textit{Interrogation.}  Score~1 victory point for each
+  opposing character model removed as a casualty in close combat.  In
+  addition, whenever an opposing character model is removed as a
+  casualty by any means, put a casualty objective marker in its place.
+  You score~1 victory point for each such marker controlled at game
+  end.  Note that neither of these criteria are limited to just
+  independent characters.}
+
+\newcommand{\frontline}%
+{\item \textit{Frontline.} Place three secondary objective markers
+  within~18'' of your opponent's table edge, at least 6'' from all
+  table edges and 12'' from all objective markers or as far apart as
+  possible. At game end, score 3 victory points for each of these
+  markers you control.}
+
+\newcommand{\controlthefield}%
+{\item \textit{Control the Field.}  Each table quarter in which you
+  have a scoring unit and your opponent does not, or you have an
+  Objective Secured Unit \& your opponent does not, is worth~4 victory
+  points at game end.}
+
+\newcommand{\breaktheirback}%
+{\item \textit{Break Their Back.}  At game end, each enemy unit that
+  has been eliminated, is falling back, or has at most~25\% of its
+  starting models remaining is broken.  Earn~2 victory points per
+  quartile if at least 25\%, 50\%, and 75\% of your opponent's army by
+  units is broken.}
+
+\newcommand{\stalwart}%
+{\item \textit{Stalwart.} Score~2 victory points for each objective
+  marker held at game end.}
+
+\newcommand{\holdthefield}%
+{\item \textit{Hold The Field.} Score~2 victory points for every~2
+  objective markers held at game end.}
+
+\newcommand{\overrun}%
+{\item \textit{Overrun.}  At game end, count how many scoring units
+  you have at least partially within your opponent's half of the
+  table, and how many scoring units your opponent has at least
+  partially within your half of the table.  If your number is higher,
+  score~2 victory points for each point of difference.}
+
+\newcommand{\majoritycontrol}%
+{\item \textit{Majority Control.}  At the end of each game turn,
+  score~1 victory point if you control more objective markers than
+  your opponent.  Score an additional point if you control more than
+  half of the markers.}
+
+\newcommand{\chosenground}%
+{\item \textit{Chosen Ground.}  Place a secondary objective marker in
+  each of your and your opponent's deployment zones, plus one outside
+  both zones, all at least~6'' from all table edges and~12'' from all
+  objective markers or as far apart as possible.  Score~3 victory
+  points at game end for each of these you control.}
+
+
+%%----------------------------------------------------------------------
+%% Maelstrom
+%%----------------------------------------------------------------------
+
+\newcommand{\maelstrom}{%
+  \missionsubheading{The Storm.}%
+  At the start of each player turn, the active player draws tactical
+  objectives until they have as many in play as the current turn
+  number.
+
+  \maelstromrules
+}
+
+\newcommand{\standingorders}{%
+  \missionsubheading{Standing Orders.}%
+  At the start of your turns, draw tactical
+  objectives until you have a total of six in play.
+
+  \maelstromrules
+}
+
+\newcommand{\maelstromrules}{%
+  \missionsubheading{Maelstrom.}%
+  To draw a tactical objective, roll a~D66 and consult your tactical
+  objective table, attached at the end of this mission packet.  If
+  that objective is already in play for you, has been achieved, or is
+  scratched off, roll again.  Similarly, if that objective would be
+  provably impossible to score, e.g., your opponent has no characters
+  remaining, roll again.  Once a valid objective has been rolled, mark
+  it as in play.
+
+  Targets cannot be nominated or chosen for a tactical objective
+  marked with a $\dagger$ that have already been chosen for a
+  $\dagger$ objective you have in play.
+
+  \smallskip%
+  At the end of your turns, check the requirements for each tactical
+  objective you have in play.  For each fixed-value objective met,
+  mark it as achieved and score the associated value in \emph{mission
+    points} (n.b.: not \emph{victory points}).  Tactical objectives
+  with a value of X may be kept in play as long as you wish.  At the
+  end of any of your turns while in play they may be marked as
+  achieved and scored as indicated.  Once achieved, objectives are no
+  longer considered in play and cannot be put in play or scored again.
+
+  Multiple objectives can be scored in a turn, caveat that you cannot
+  achieve multiple tactical objectives with the same exact title in
+  the same turn using the same marker(s) or unit(s).  E.g., to score
+  both Storm objectives at once, you would need to simultaneously
+  control two separate markers in the enemy deployment zone.
+
+  At the end of your turn you may scratch out~1 of your tactical
+  objectives in play to remove it from play.
+
+  \smallskip%
+  Tactical objectives in play, achieved, and scratched out are not
+  secret.}
+
+\newcommand{\maelstromscoring}
+{At game end, compare mission points earned through tactical
+objectives achieved and award victory points to the higher and lower
+scorer as follows:
+
+%\definecolor{Gray}{gray}{0.9}
+%\definecolor{DGray}{gray}{0.75}
+\newcolumntype{a}{>{\columncolor{gray!25}}c}
+\newcolumntype{b}{>{\columncolor{gray!50}}r}
+\bigskip\centerline{\setlength{\tabcolsep}{12pt}%
+\begin{tabular}{bcacaca}
+\cellcolor{LineColor}{\color{white}\bf Difference}     & 0     & 1--2  & 3--4  & 5--6  & 7     & 8+\\
+\cellcolor{LineColor}{\color{white}\bf Victory Points} & 4 / 4 & 5 / 4 & 6 / 3 & 7 / 2 & 8 / 1 & 9 / 0\\
+\end{tabular}}}
